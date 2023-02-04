@@ -41,9 +41,13 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
+        }else if(buttons[i].classList.contains('function')){
+                inputpi(displayValue);
+                updateDisplay();
+                }
         }
     )}
 }
@@ -181,4 +185,8 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+// Creating PI function
+function inputpi(num) {
+    displayValue = (num*3.14).toString();
 }
