@@ -44,10 +44,23 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
-        }else if(buttons[i].classList.contains('function')){
+        }else if(buttons[i].classList.contains('pi')){
                 inputpi(displayValue);
                 updateDisplay();
                 }
+                else if(buttons[i].classList.contains('power')){
+                    inputpower(displayValue);
+                    updateDisplay();
+                    }
+                    else if(buttons[i].classList.contains('sqrt')){
+                        inputsqrt(displayValue);
+                        updateDisplay();
+                        }
+                        else if(buttons[i].classList.contains('log')){
+                            inputlog(displayValue);
+                            updateDisplay();
+                            }
+
         }
     )}
 }
@@ -189,4 +202,16 @@ function roundAccurately(num, places) {
 // Creating PI function
 function inputpi(num) {
     displayValue = (num*3.14).toString();
+}
+// Creating power function
+function inputpower(num) {
+    displayValue = (Math.pow(num, 2)).toString();
+}
+// Creating sqrt function
+function inputsqrt(num) {
+    displayValue = (Math.sqrt(num)).toString();
+}
+// Creating log function
+function inputlog(num) {
+    displayValue = (Math.log2(num)).toString();
 }
