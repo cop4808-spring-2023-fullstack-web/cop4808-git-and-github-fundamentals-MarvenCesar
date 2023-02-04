@@ -108,3 +108,9 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
+.function {
+    background-color: rgb(251, 255, 0);
+}
+.function:active {
+    background-color: rgb(253, 255, 202);
+}
